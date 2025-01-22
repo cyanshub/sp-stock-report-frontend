@@ -1,8 +1,11 @@
+'use client'
+
 import localFont from 'next/font/local'
 import './globals.css'
 import Head from 'next/head'
 import Link from 'next/link'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import styled from 'styled-components'
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -14,6 +17,29 @@ const geistMono = localFont({
   variable: '--font-geist-mono',
   weight: '100 900'
 })
+
+// Styled components
+const PageContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* 撐滿視窗高度 */
+  justify-content: space-between; /* 確保內容與 footer 分佈合理 */
+`
+
+const Main = styled.main`
+  flex-grow: 1; /* 撐開主要內容區域 */
+  padding: 0; /* 內容內間距 */
+`
+
+const Footer = styled.footer`
+  background-color: #1f2937;
+  color: #9ca3af;
+  text-align: center;
+  padding: 0.75rem 0 0 0; /* 增加上下間距 */
+  font-size: 0.875rem; /* 稍微放大文字大小 */
+  line-height: 1.4; /* 提升可讀性 */
+  flex-shrink: 0; /* 防止被壓縮 */
+`
 
 export default function RootLayout({
   children
@@ -28,17 +54,19 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <main className="flex-grow">{children}</main>
-        <footer className="bg-gray-800 text-center py-2 text-sm text-gray-400">
-          <div className="container">
-            <p>
-              &copy; 2025 Stock Analysis Site. All rights reserved.{' '}
-              <Link href="/disclaimer" className="underline hover:text-white">
-                Disclaimer
-              </Link>
-            </p>
-          </div>
-        </footer>
+        <PageContainer>
+          <Main>{children}</Main>
+          <Footer>
+            <div className="container">
+              <p>
+                &copy; 2025 Stock Analysis Site. All rights reserved.{' '}
+                <Link href="/disclaimer" className="text-gray-600 hover:text-gray-200 transition-colors no-underline">
+                  Disclaimer
+                </Link>
+              </p>
+            </div>
+          </Footer>
+        </PageContainer>
       </body>
     </html>
   )
