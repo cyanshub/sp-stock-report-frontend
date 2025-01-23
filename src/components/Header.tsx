@@ -3,7 +3,7 @@ import Link from "next/link";
 import styled from "styled-components";
 
 type HeaderProps = {
-  currentPage: "home" | "disclaimer";
+  currentPage: "home" | "disclaimer" | "under-construction";
 };
 
 export default function Header({ currentPage }: HeaderProps) {
@@ -48,13 +48,13 @@ export default function Header({ currentPage }: HeaderProps) {
                 {currentPage === "home" ? (
                   <>
                     <BoxItem>
-                      <StyledLink href="/about">關於平台</StyledLink>
+                      <StyledLink href="/under-construction">關於平台</StyledLink>
                     </BoxItem>
                     <BoxItem>
-                      <StyledLink href="/services">本站服務</StyledLink>
+                      <StyledLink href="/under-construction">本站服務</StyledLink>
                     </BoxItem>
                     <BoxItem>
-                      <StyledLink href="/contact">聯絡我們</StyledLink>
+                      <StyledLink href="/under-construction">聯絡我們</StyledLink>
                     </BoxItem>
                     <BoxItem>
                       <StyledLink href="/disclaimer">免責聲明</StyledLink>
@@ -66,10 +66,10 @@ export default function Header({ currentPage }: HeaderProps) {
                       <StyledLink href="/">平台首頁</StyledLink>
                     </BoxItem>
                     <BoxItem>
-                      <StyledLink href="/about">關於平台</StyledLink>
+                      <StyledLink href="/under-construction">關於平台</StyledLink>
                     </BoxItem>
                     <BoxItem>
-                      <StyledLink href="/analysis">資訊分析</StyledLink>
+                      <StyledLink href="/under-construction">資訊分析</StyledLink>
                     </BoxItem>
                     <BoxItem>
                       <StyledLink href="/disclaimer">免責聲明</StyledLink>
@@ -85,13 +85,13 @@ export default function Header({ currentPage }: HeaderProps) {
               {currentPage === "home" ? (
                 <>
                   <NavItem>
-                    <StyledLink href="/about">關於平台</StyledLink>
+                    <StyledLink href="/under-construction">關於平台</StyledLink>
                   </NavItem>
                   <NavItem>
-                    <StyledLink href="/services">本站服務</StyledLink>
+                    <StyledLink href="/under-construction">本站服務</StyledLink>
                   </NavItem>
                   <NavItem>
-                    <StyledLink href="/contact">聯絡我們</StyledLink>
+                    <StyledLink href="/under-construction">聯絡我們</StyledLink>
                   </NavItem>
                   <NavItem>
                     <StyledLink href="/disclaimer">免責聲明</StyledLink>
@@ -103,10 +103,10 @@ export default function Header({ currentPage }: HeaderProps) {
                     <StyledLink href="/">平台首頁</StyledLink>
                   </NavItem>
                   <NavItem>
-                    <StyledLink href="/about">關於平台</StyledLink>
+                    <StyledLink href="/under-construction">關於平台</StyledLink>
                   </NavItem>
                   <NavItem>
-                    <StyledLink href="/analysis">資訊分析</StyledLink>
+                    <StyledLink href="/under-construction">資訊分析</StyledLink>
                   </NavItem>
                   <NavItem>
                     <StyledLink href="/disclaimer">免責聲明</StyledLink>
