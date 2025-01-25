@@ -90,7 +90,11 @@ export default function Header({ currentPage }: HeaderProps) {
   )
 }
 
-const StyledHeader = styled.header<{ isMobile: boolean }>`
+// .attrs() 是 styled-components 提供的用來設定靜態或動態屬性的工具
+// attrs(() => ({})) 並未實際設定任何屬性，只是一個空物件
+// TypeScript 的型別註解，表示 StyledHeader 元件會接受一個名為 isMobile 的屬性
+// const StyledHeader = styled.header.attrs(() => ({}))<{ isMobile: boolean }>`
+const StyledHeader = styled.header.attrs(() => ({}))<{ isMobile: boolean }>`
   font-size: 1rem;
   background-color: #2d3748;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
