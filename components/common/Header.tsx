@@ -36,7 +36,7 @@ export default function Header({ currentPage }: HeaderProps) {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/construction" className="hover:text-gray-300">
+                    <Link href="/disclaimer" className="hover:text-gray-300">
                       免責聲明
                     </Link>
                   </li>
@@ -59,7 +59,7 @@ export default function Header({ currentPage }: HeaderProps) {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/construction" className="hover:text-gray-300">
+                    <Link href="/disclaimer" className="hover:text-gray-300">
                       免責聲明
                     </Link>
                   </li>
