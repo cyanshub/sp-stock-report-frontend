@@ -25,3 +25,43 @@ body {
     text-wrap: balance;
   }
 }
+
+/* 全局排版 */
+
+
+/* 全局樣式 */
+a {
+  text-decoration: none;
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.btn {
+  @apply font-bold py-2 px-4 rounded transition duration-300;
+}
+
+.btn-primary {
+  @apply bg-blue-600 text-white hover:bg-blue-700;
+}
+
+.btn-secondary {
+  @apply bg-gray-600 text-white hover:bg-gray-700;
+}
+
+.input {
+  @apply w-full p-2 bg-gray-700 text-white rounded focus:outline-none focus:ring-2 focus:ring-blue-600;
+}
+
+.card {
+  @apply bg-gray-800 rounded-lg shadow-lg p-6;
+}
+
+.title {
+  @apply text-3xl font-bold mb-4;
+}
+
+.subtitle {
+  @apply text-xl mb-2;
+}
