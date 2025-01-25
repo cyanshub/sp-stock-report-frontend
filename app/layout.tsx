@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import '@/assets/globals.css'
+import Footer from '@/components/common/Footer'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -13,7 +14,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`antialiased`}>{children}</body>
+      {/* 所有元素要包裹在 body 裡面 */}
+      <body className={`antialiased`}>
+        <div className='.main'>
+          {children}
+        </div>
+        <Footer/>
+      </body>
     </html>
   )
 }
