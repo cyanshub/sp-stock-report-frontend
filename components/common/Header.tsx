@@ -51,7 +51,8 @@ export default function Header({ currentPage }: HeaderProps) {
   const currentLinks = currentPage === 'home' ? links.home : links.others
 
   return (
-    <StyledHeader>
+    // 根據當前 isMobile 調整樣式
+    <StyledHeader isMobile={isMobile}>
       <Nav>
         <NavLogo>
           <StyledLink href="/">平台首頁</StyledLink>
@@ -89,11 +90,11 @@ export default function Header({ currentPage }: HeaderProps) {
   )
 }
 
-const StyledHeader = styled.header`
+const StyledHeader = styled.header<{ isMobile: boolean }>`
   font-size: 1rem;
   background-color: #2d3748;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 0.6rem 3rem;
+  padding: ${({ isMobile }) => (isMobile ? '0.6rem 1rem' : '0.6rem 3rem')};
   position: relative;
 `
 
