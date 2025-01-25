@@ -3,7 +3,7 @@
 import Link from 'next/link'
 
 type HeaderProps = {
-  currentPage: 'home' | 'disclaimer'
+  currentPage?: 'home' | 'disclaimer'
 }
 
 export default function Header({ currentPage }: HeaderProps) {
@@ -21,22 +21,22 @@ export default function Header({ currentPage }: HeaderProps) {
               {currentPage === 'home' ? (
                 <>
                   <li>
-                    <Link href="/about" className="hover:text-gray-300">
+                    <Link href="/construction" className="hover:text-gray-300">
                       關於本站
                     </Link>
                   </li>
                   <li>
-                    <Link href="/services" className="hover:text-gray-300">
+                    <Link href="/construction" className="hover:text-gray-300">
                       系統服務
                     </Link>
                   </li>
                   <li>
-                    <Link href="/contact" className="hover:text-gray-300">
+                    <Link href="/construction" className="hover:text-gray-300">
                       聯絡我們
                     </Link>
                   </li>
                   <li>
-                    <Link href="/disclaimer" className="hover:text-gray-300">
+                    <Link href="/construction" className="hover:text-gray-300">
                       免責聲明
                     </Link>
                   </li>
@@ -49,17 +49,17 @@ export default function Header({ currentPage }: HeaderProps) {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/about" className="hover:text-gray-300">
+                    <Link href="/construction" className="hover:text-gray-300">
                       關於本站
                     </Link>
                   </li>
                   <li>
-                    <Link href="/analysis" className="hover:text-gray-300">
+                    <Link href="/construction" className="hover:text-gray-300">
                       資訊分析
                     </Link>
                   </li>
                   <li>
-                    <Link href="/disclaimer" className="hover:text-gray-300">
+                    <Link href="/construction" className="hover:text-gray-300">
                       免責聲明
                     </Link>
                   </li>
