@@ -6,7 +6,7 @@ import { OutlineButton } from '@/components/common/Button'
 export default function Disclaimer() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
-      <Header currentPage="disclaimer" />
+      <Header currentPage="others" />
 
       <main className="container mx-auto px-6 py-16">
         <h1 className="text-4xl font-bold mb-8">免責聲明</h1>
